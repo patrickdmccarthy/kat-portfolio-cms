@@ -1,7 +1,7 @@
 import React from 'react';
 import Emoji from 'react-emojis';
 
-const Icon = () => <Emoji emoji="headphone" size="30"/>;
+const Icon = () => <Emoji emoji="foot" size="30"/>;
 
 export default {
 	name: 'footer',
@@ -10,15 +10,9 @@ export default {
 	type: 'document',
 	fields: [
 		{
-			name: 'title',
-			title: 'Title',
-			type: 'string',
-		},
-		{
-			name: 'links',
-			title: 'Links',
-			type: 'array',
-			of: [{type: 'link'}]
+			name: 'copy',
+			title: 'Copy',
+			type: 'richText',
 		},
 	]
 };

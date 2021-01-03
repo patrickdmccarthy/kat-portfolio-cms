@@ -6,7 +6,9 @@ import seo from './types/seo'
 import footer from './types/footer'
 import link from './types/link'
 import project from './types/project'
+import projectList from './types/projectList'
 import homepage from './types/homepage'
+import richText from './types/richText'
 
 export default createSchema({
   name: 'default',
@@ -17,5 +19,7 @@ export default createSchema({
     seo,
     project,
     homepage,
+    richText,
+    projectList,
   ])
 })

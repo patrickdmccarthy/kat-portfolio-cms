@@ -16,6 +16,20 @@ export default {
 			validation: Rule => Rule.required(),
 		},
 		{
+			name: 'link',
+			title: 'Link',
+			type: 'link',
+		},
+		{
+			title: 'Slug',
+			name: 'slug',
+			type: 'slug',
+			validation: Rule => Rule.required(),
+			options: {
+				source: 'title',
+			}
+		},
+		{
 			name: 'shortDescription',
 			title: 'Short Description',
 			type: 'string',
@@ -40,16 +54,21 @@ export default {
 			validation: Rule => Rule.required(),
 		},
 		{
-			name: 'cardImage',
-			title: 'Card Image',
-			type: 'image',
-			validation: Rule => Rule.required(),
-		},
-		{
 			name: 'images',
 			title: 'Images',
 			type: 'array',
-			of: [{type: 'image'}],
+			of: [
+				{
+					title: 'Image',
+					name: 'image',
+					type: 'image',
+				},
+				{
+					title: "Video file",
+					name: "video",
+					type: "mux.video"
+				}
+			],
 			validation: Rule => Rule.required(),
 		},
 		{
