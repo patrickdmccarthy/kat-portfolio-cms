@@ -54,6 +54,18 @@ export default {
 			validation: Rule => Rule.required(),
 		},
 		{
+			name: 'backgroundColor',
+			title: 'Background Color',
+			type: 'color',
+			validation: Rule => Rule.required(),
+		},
+		{
+			name: 'textColor',
+			title: 'Text Color',
+			type: 'color',
+			validation: Rule => Rule.required(),
+		},
+		{
 			name: 'images',
 			title: 'Images',
 			type: 'array',
@@ -69,6 +81,12 @@ export default {
 					type: "mux.video"
 				}
 			],
+			validation: Rule => Rule.required(),
+		},
+		{
+			title: 'Image',
+			name: 'hoverImage',
+			type: 'image',
 			validation: Rule => Rule.required(),
 		},
 		{
